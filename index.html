@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Saya</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        
+        :root {
+            --bg-dark: #111827;       
+            --bg-card: #1f2937;       
+            --accent: #0ea5e9;       
+            --accent-hover: #0284c7;  
+            --text-main: #f9fafb;     
+            --text-muted: #9ca3af;    
+            --border-color: #374151;  
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* --- NAVBAR & FOOTER --- */
+        .bg-primary {
+            background-color: #030712 !important; 
+            border-bottom: 1px solid var(--border-color);
+        }
+        footer.bg-primary {
+            border-bottom: none;
+            border-top: 1px solid var(--border-color);
+        }
+        .navbar-brand, .nav-link {
+            color: var(--text-main) !important;
+        }
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        /* Override bg-light bawaan Bootstrap agar tembus pandang di dark mode */
+        .bg-light {
+            background-color: transparent !important;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h5 {
+            color: var(--text-main);
+        }
+        p {
+            color: var(--text-muted);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 100px 0;
+        }
+        .hero img {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%; 
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.4); 
+            transition: 0.4s;
+        }
+        .hero img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(14, 165, 233, 0.7);
+        }
+
+        
+        .btn-primary {
+            background-color: var(--accent) !important;
+            border: none !important;
+            color: #fff !important;
+            font-weight: 600;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-hover) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+        }
+
+        
+        .portfolio-item {
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            height: 100%;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent); 
+        }
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* --- FORM KONTAK --- */
+        form {
+            background-color: var(--bg-card) !important;
+            border: 1px solid var(--border-color);
+        }
+        .form-label {
+            color: var(--text-main);
+        }
+        .form-control {
+            background-color: #374151; /* Warna input form gelap */
+            border: 1px solid #4b5563;
+            color: #ffffff;
+        }
+        .form-control::placeholder {
+            color: #9ca3af;
+        }
+        .form-control:focus {
+            background-color: #4b5563;
+            color: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <img src="galeri/fto 3.jpeg" alt="Profile">
+            <h1 class="mt-4 fw-bold">DIMAS HAYYU NAFI'A</h1>
+            <p class="lead"> MAHASISWA | SISTEM INFORMASI |creative art </p>
+            <a href="#portfolio" class="btn btn-primary btn-lg mt-3 px-4">Lihat Karya Saya</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Portfolio</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="galeri/BOUQET.jpeg" alt="Project 1">
+                        <h5 class="mt-3 fw-semibold">Project 1</h5>
+                        <p>Membuat project bucket disusun menggunakan berbagai macam camilan populer yang dijual di Indonesia, seperti Pocky, Duosus, Superstar, French Fries 2000, dan Time Break.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="galeri/MEMBUAT SUSHI .jpeg" alt="Project 2">
+                        <h5 class="mt-3 fw-semibold">Project 2</h5>
+                        <p>project kedua saya membuat salah satu makan dari jepang yaitu sushi.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="galeri/SAAT JADI .jpeg" alt="Project 3">
+                        <h5 class="mt-3 fw-semibold">Project 3</h5>
+                        <p>project ketiga  project perpisahan saat SMA yang di kerjakan oleh saya dan tim  .</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Contact Me</h2>
+
+            <form class="mx-auto p-4 rounded-4 shadow" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Nama</label>
+                    <input type="text" class="form-control" placeholder="Masukkan nama...">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email</label>
+                    <input type="email" class="form-control" placeholder="Email kamu...">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Pesan</label>
+                    <textarea class="form-control" rows="4" placeholder="Tulis pesan..."></textarea>
+                </div>
+
+                <button class="btn btn-primary w-100 mt-2">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white text-center py-4 mt-5">
+        <p class="mb-0 text-muted">&copy; 2025 Portfolio Saya. All Rights Reserved.</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
